@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/canonical/penpot-operator/commit/bc0928881a67baab3d1460cb2feaeb10d66349ef",
       "git:hexsha": "bc0928881a67baab3d1460cb2feaeb10d66349ef",
-      "repolex:parseStatus": "metadata_complete",
+      "repolex:parseStatus": "ast_complete",
       "git:tagName": "publish-41773856542"
     },
     {
