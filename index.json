@@ -1,0 +1,11 @@
+{
+  "org": "canonical",
+  "repo": "penpot-operator",
+  "versions": [
+    {
+      "commit": "bc0928881a67baab3d1460cb2feaeb10d66349ef",
+      "tag": "penpot-rev92",
+      "parsed_at": "2026-11-08T04:46:21.939879+00:00"
+    }
+  ]
+}

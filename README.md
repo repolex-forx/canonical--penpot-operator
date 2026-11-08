@@ -1,1 +1,168 @@
-Initializing
+# Repolex Knowledge Graph of canonical/penpot-operator
+
+RDF knowledge graph data for [canonical/penpot-operator](https://github.com/canonical/penpot-operator), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download canonical/penpot-operator
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── bc0928881a67baab3d1460cb2feaeb10d66349ef
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── bc0928881a67baab3d1460cb2feaeb10d66349ef
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 01d5de2be9e1388acc0639a4c6ea331640337347.nq.gz
+│   ├── 02361050a74f8c7508cc12ed3d26ae641a0352af.nq.gz
+│   ├── 04e5ced7e35d458422c3df7b55b8b660d34a2a5a.nq.gz
+│   ├── 08fd8a8ae5372df30d018be6a92cc0fc8dff55fc.nq.gz
+│   ├── 106bb817d82cd54babf27e4e30a462484a545edc.nq.gz
+│   ├── 10dce27fb26bd8140a83f52c5c4c979e04cbf381.nq.gz
+│   ├── 1b9189c0994a8b6989f600ffa7f6e6c2024e9585.nq.gz
+│   ├── 213ec01d15a4e63159e610b387073bf3c6028137.nq.gz
+│   ├── 21441633b17e39399650098fc36dddb57c4d0d67.nq.gz
+│   ├── 26ac226df88c6bc3785214f437d30606702a7736.nq.gz
+│   ├── 29d45c2ecef1155c5eeb129f7afa2d55a01162cd.nq.gz
+│   ├── 29ede242ff455a64fa253000d80487a0bb723248.nq.gz
+│   ├── 2db7f38922b53bd3323492fe2532042a05ed74cb.nq.gz
+│   ├── 3372cdf832ee05e9662c2b38bd09673703f18820.nq.gz
+│   ├── 350d969edb9e532c464817dc76bc145c2e282a05.nq.gz
+│   ├── 3fc1b68ef3973b6192287060c0403cc36253654c.nq.gz
+│   ├── 41f1dd703eccf36bee0210d5a30118c7d9a58c86.nq.gz
+│   ├── 42218584d53741ea3ac0fbcdafd8bbf305c2b7c3.nq.gz
+│   ├── 466959f368ba3d862ecd34a1670664b822426f87.nq.gz
+│   ├── 4f13f0380d610d4f0d7d0f6868fefe56d5f1841a.nq.gz
+│   ├── 4fcfd990c7b019aa37b341b61a25220974d120b7.nq.gz
+│   ├── 508f2f9de9859f7884fdd098284492d1bb15f51d.nq.gz
+│   ├── 52bba9b0fbe1c6b4e367bc63847b273bb94b99ef.nq.gz
+│   ├── 56a6051ca2b02b04ef92d5150c9ef600403cb1de.nq.gz
+│   ├── 57058e7a837c7961a5999f93e0d3e3011401c26f.nq.gz
+│   ├── 5a1b4006cbed29b2029e66ba370bb18eba5a9069.nq.gz
+│   ├── 5a6c01a2cfcf263b22a912fc639ea6f7651a4b78.nq.gz
+│   ├── 5ce31d9250645ed62167ac74b76b6ab82b6fffa1.nq.gz
+│   ├── 5e2e047974b1227ded2fdbd978117730cf95fe7b.nq.gz
+│   ├── 60d5048da55548d3cb01948d905682e3797b6a7b.nq.gz
+│   ├── 62175208361c793ed9cf96f2ec706ceb89722eb9.nq.gz
+│   ├── 637cc0a8ee40c32c3b29a760116dd03fbe01bc5c.nq.gz
+│   ├── 65622db63e14ad878169ce926770a93c6ff7ea72.nq.gz
+│   ├── 66649de94c98ef7f1e46f41e111b81189077d8bb.nq.gz
+│   ├── 66d64d5b6cacfa7561bb4efa75768de5cbaa5166.nq.gz
+│   ├── 6cfd65d504016e63657509313a4e61e670c01790.nq.gz
+│   ├── 6f94cded4fec60283aa42d48789f2f779e32bb9a.nq.gz
+│   ├── 7467d00596ad5d0b43a817a2c7e9741a9605cc01.nq.gz
+│   ├── 7671ad644914cd75d33c842250b7b914abf71ac2.nq.gz
+│   ├── 76ff31b839648197d6dfd9e59fa2aa06e6520574.nq.gz
+│   ├── 7ae3bd060fa059a44a53c6f62f0c4e9bdbf50fba.nq.gz
+│   ├── 835f5ec520611812dbe8cab235f766d88242731b.nq.gz
+│   ├── 8ab7f285e27e818741f688c454c3fada4f29649d.nq.gz
+│   ├── 8c966096ff1e60ec568d7abb5bfde7a8095af9b5.nq.gz
+│   ├── 94c6344447875bd314eff0f24600fb4276ecf2d7.nq.gz
+│   ├── 962e40288de8a99d4c0b0f9ad35e4fbbe88388a0.nq.gz
+│   ├── 9d53ecf18ed16f712404a1363b653d4b27c43857.nq.gz
+│   ├── 9fcdac7f079285804ecec228aa2b4aa36f6a52aa.nq.gz
+│   ├── a07743a149cd986af8fffe26503005de4c775488.nq.gz
+│   ├── a9bf4804733b2d669b9058226ae2c18e2dd2a6a2.nq.gz
+│   ├── b10f897e6665bbf1c9e707056f9cf8ff0b24931b.nq.gz
+│   ├── b42a1f6ba921f276fa86a661b895fcd8b002deb1.nq.gz
+│   ├── b5d761d71b2072a7a5711f992c177fea3400daf4.nq.gz
+│   ├── b65a851b0379ff732e9909a3b03ca71a04848ee5.nq.gz
+│   ├── b8fda6c7a611ff00889e44a930a81d9b0a27d12f.nq.gz
+│   ├── c09777fc628a9a2ce3789f82b268e69c1495e302.nq.gz
+│   ├── c4a371b812c1a5056a6bfe2068b2a73eb8bd3a7a.nq.gz
+│   ├── c895d699692601fab2751d257451d7b51a5df0eb.nq.gz
+│   ├── c8ac363d9ff3cb4c4f3212016be7335634650150.nq.gz
+│   ├── cc6b02353ce81c3553123bacdef808d77f708a42.nq.gz
+│   ├── cc7de8e4f2f74ea40f53b3963ceef3ace6462b9a.nq.gz
+│   ├── d13066a1a8084d69b3be15df855c29df99c6f000.nq.gz
+│   ├── d6d8c792b45cebb8c556f30180de1ecfeaf136bf.nq.gz
+│   ├── d83d7b547de3e507184a9a7ee33c564763ff55aa.nq.gz
+│   ├── db3c9f056c30fec5de7b694ac1b521fc47f174ee.nq.gz
+│   ├── dbf4d5bb721e2c91fc81ad9e7bc352896740ad17.nq.gz
+│   ├── dc0046103858b0916f891ef633b66bfa5fc0e8bb.nq.gz
+│   ├── df1c258ee21033f7037cf69318940fd537449d3d.nq.gz
+│   ├── df261b922864b1f0a02f85be91aa936a4c78f71e.nq.gz
+│   ├── df541556b4c8b8d1d2040a3acdf1aa8872e9c1a7.nq.gz
+│   ├── e15bc8a467fe5362b11c091df8dc516ad8f448ee.nq.gz
+│   ├── e1f48621f9cf440d11a77a271cea87a01ea0971e.nq.gz
+│   ├── e28b14c2de9526b516aefaed241cc29d2a8c7bfc.nq.gz
+│   ├── e3979c0f638ada75e933f2f081677f84281d9dae.nq.gz
+│   ├── e6189937837fbed9f7ca358560fc55c37c3cea0b.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e6b483f5a95e530068753fe3301df407025b4acf.nq.gz
+│   ├── e76de476bc55d7b8e8076a626b04e8868869daeb.nq.gz
+│   ├── ebec7c57d67983af53a01b9afa0adc69a243f671.nq.gz
+│   ├── ebfb77b347949be9dbef1af2aa43642dec677ac1.nq.gz
+│   ├── f3c96a1f81252d65108421e40b556af3c34e2230.nq.gz
+│   ├── f4a65fdd7c0714cb6e6d8696295f9c0110a5e870.nq.gz
+│   ├── f6410fd8355723b8512798382f545890b0e2a11d.nq.gz
+│   ├── f93b8632edcddcb5e23f05b83117b0b4d9d3e924.nq.gz
+│   ├── f9bf89f5eacc3af1fa367c4e6fcd66a0c0cb445c.nq.gz
+│   ├── fdc92aa36e50df0c99c516cc64c112c028382965.nq.gz
+│   ├── fe3518b0772aaeea4b156d5d8453f58c15b3ab96.nq.gz
+│   ├── fe6468e8d0a1957aba024423c38b9eac57f996f6.nq.gz
+│   └── fea61e3473b4d347d57c244eb762755d56c8f2cd.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── bc0928881a67baab3d1460cb2feaeb10d66349ef.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 97 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[canonical/penpot-operator](https://github.com/canonical/penpot-operator)
+
+---
+*Parsed on 2026-11-08 by [repolex](https://repolex.ai)*
